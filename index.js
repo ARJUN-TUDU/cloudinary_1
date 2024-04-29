@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin:["http://localhost:3000"],
+    origin:["https://cloudinary-frontend-1.vercel.app/"],
     methods : ["GET","POST"]
 }))
 
@@ -37,14 +37,15 @@ app.post("/upload",async (req,res)=>{
     
     try{
         const image = req.body.image;
-    const name = req.body.name;
+        const name = req.body.name;
 
-    console.log(req.body)
+        console.log(req.body)
     
         const new_data = new User({
           image,name
         })
         await new_data.save();
+
     }catch(e){
 
     }

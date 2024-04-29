@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin:["https://cloudinary-frontend-1.vercel.app/"],
+    origin:["https://cloudinary-frontend-1.vercel.app"],
     methods : ["GET","POST"]
 }))
 
